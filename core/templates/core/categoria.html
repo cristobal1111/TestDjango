@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'core/img/logo.ico'%}">
+    <title>Categoria</title>
+
+    <!--CSS-->
+    <link href="{% static 'core/css/categoria.css'%}" rel="stylesheet">
+
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+
+    <!--Bootstrap-Css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="nav">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="collapse navbar-collapse" id="navbarsupportedcontent">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar Atención"
+                            aria-label="Search">
+                    </form>
+                    <ul class="navbar-nav mr-auto">
+                        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Buscar</button>
+                        <li class="inicio">
+                            <a class="nav-link" href="{% url 'home' %}">Inicio </a>
+                        </li>
+                        <li class="Atendedor">
+                            <a class="nav-link" href="{% url 'atendedor' %}">Atendedor</a>
+                        </li>
+                        <li class="nosotros">
+                            <a class="nav-link" href="{% url 'nosotros' %}">Nosotros</a>
+                        </li>
+                        <li class="login">
+                            <a class="nav-link" href="{% url 'iniciarSesion' %}">Iniciar Sesión</a>
+                        </li>
+                        <li class="Registro">
+                            <a class="nav-link" href="{% url 'registro' %}">Registrarse</a>
+                        </li>
+                        </li>
+                        <li class="Contacto">
+                            <a class="nav-link" href="{% url 'Contacto' %}">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <div class="container-fluid">
+        <div class="p-4 p-md-5 mb-4 text-white rounded bg-dark">
+            <div class="col-md-6 px-0">
+              <h1 class="titulo">Categorías</p>
+                <h2 class="subtitulo">¡Busca lo que necesitas! Guiate de acuerdo a la categoria!</h2>
+                    <img src="{% static 'core/img/logo.png'%}" class="logoN">
+                </p>
+            </div>
+
+            
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{% static 'core/img/motor.jpg'%}" class="card-img-top" alt="Cajas">
+                            <div class="card-motor">
+                                <h5 class="card-title">Caja de cambios</h5>
+                                <p class="card-text">En esta sección encontraras todo sobre mantenciones de motor.</p>
+                                <a href="{% url 'caja' %}" class="btn btn-dark">Visitar</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{% static 'core/img/ea3.jpg'%}" class="card-img-top" alt="Electronica">
+                            <div class="card-ea3">
+                                <h5 class="card-title">Electr&oacute;nica automotriz</h5>
+                                <p class="card-text">En esta sección encontraras todo sobre cambio de neumaticos.</p>
+                                <a href="{% url 'ea' %}" class="btn btn-dark">Visitar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{% static 'core/img/suspension-y-direccion.jpg'%}" class="card-img-top" alt="Suspension">
+                            <div class="card-ea4">
+                                <h5 class="card-title">Suspensi&oacute;n y direcci&oacute;n</h5>
+                                <p class="card-text">En esta sección encontraras todo suspensi&oacute;n y direcci&oacute;n</p>
+                                <a href="{% url 'suspension' %}" class="btn btn-dark">Visitar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container-fluid">
+        <div class="p-4 p-md-5 mb-4 text-white rounded bg-primary">
+            <div class="col-md-6 px-0">
+                <h1 class="titulo">Atendedores destacados</h1>
+                    <h2 class="subtitulo">¡Nuestros atendedores mas destacados! Explora su trabajo!</h2>
+                    <img src="{% static 'core/img/logo.png'%}" class="logoN">
+            </div>
+
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{% static 'core/img/mecanicomotor.jpg'%}" class="card-img-top" alt="Neumaticos">
+                            <div class="card-ea3">
+                                <h5 class="card-title">Juan González</h5>
+                                <p class="card-text">Especialista en cajas de cambio</p>
+                                <a href="{% url 'perfil1' %}" class="btn btn-dark">Visitar</a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{% static 'core/img/mecanicoelectro.jpg'%}" class="card-img-top" alt="Neumaticos">
+                            <div class="card-ea4">
+                                <h5 class="card-title">Manuel Vásquez</h5>
+                                <p class="card-text">Especialista en electr&oacute;nica</p>
+                                <a href="{% url 'perfil3' %}" class="btn btn-dark">Visitar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+        <h5 id="derechos">@Todos los derechos reservados</h5>
+
+    </footer>
+</body>
+
+</html>

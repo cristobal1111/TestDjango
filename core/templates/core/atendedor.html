@@ -1,0 +1,196 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'core/img/logo.ico'%}">
+    <title>Atendedor</title>
+
+
+    <!--CSS-->
+    <link href="{% static 'core/css/categoria.css'%}" rel="stylesheet">
+
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+
+    <!--Bootstrap-Css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+</head>
+
+<body class="body">
+    <div class="container-fluid">
+        <header class="nav">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="collapse navbar-collapse" id="navbarsupportedcontent">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Buscar Atención"
+                            aria-label="Search">
+                    </form>
+                    <ul class="navbar-nav mr-auto">
+                        <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Buscar</button>
+                        <li class="inicio">
+                            <a class="nav-link" href="{% url 'home' %}">Inicio <span class="sr-only"></span></a>
+                        </li>
+                        <li class="Categoria">
+                            <a class="nav-link" href="{% url 'categoria' %}">Categoria</a>
+                        </li>
+                        <li class="nosotros">
+                            <a class="nav-link" href="{% url 'nosotros' %}">Nosotros</a>
+                        </li>
+                        <li class="login">
+                            <a class="nav-link" href="{% url 'iniciarSesion' %}">Iniciar Sesión</a>
+                        </li>
+                        <li class="Registro">
+                            <a class="nav-link" href="{% url 'registro' %}">Registrarse</a>
+                        </li>
+                        </li>
+                        <li class="Contacto">
+                            <a class="nav-link" href="{% url 'Contacto' %}">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+    </div>
+
+    <div class="container-fluid">
+        <div class="p-4 p-md-5 mb-4 text-white rounded bg-info">
+            <div class="col-md-6 px-0">
+                <h1 class="titulo">Atendedores</p>
+                    <h2 class="subtitulo">¡Aquí encontraras nuestros atendedores con sus trabajos!</h2>
+                    <img src="{% static 'core/img/logo.png'%}" class="logoN">
+                    </p>
+            </div>
+
+
+            <div class="container-fluid">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{% static 'core/img/mecanicomotor.jpg'%}" class="card-img-top" alt="Pinturas">
+                            <div class="card-motor">
+                                <h5 class="card-title">Juan gonzález</h5>
+                                <p class="card-text">Especialista  en revisiones
+                                    tecnicas </p>
+                                <a href="{% url 'perfil1' %}" class="btn btn-dark">Visitar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{% static 'core/img/mecanico3.jpg'%}" class="card-img-top" alt="Pinturas">
+                            <div class="card-motor">
+                                <h5 class="card-title">Jean Rodriguez</h5>
+                                <p class="card-text">Especialista en Suspension y direcciones del vehiculo.</p>
+                                <a href="{% url 'perfil2' %}" class="btn btn-dark">Visitar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{% static 'core/img/mecanicoelectro.jpg'%}" class="card-img-top" alt="Pinturas">
+                            <div class="card-motor">
+                                <h5 class="card-title">Manuel V&aacute;squez</h5>
+                                <p class="card-text">Especialista en electr&oacute;nica.</p>
+                                <a href="{% url 'perfil3' %}" class="btn btn-dark">Visitar</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{% static 'core/img/mecanicoluc.jpg'%}" class="card-img-top" alt="Pinturas">
+                            <div class="card-motor">
+                                <h5 class="card-title">Axel Ramirez</h5>
+                                <p class="card-text">Especialista en Cambios Basicos.</p>
+                                <a href="{% url 'perfil4' %}" class="btn btn-dark">Visitar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Reseñas de clientes atendidos</strong>
+                        <h3 class="mb-0">Cristobal Gonzalez</h3>
+                        <div class="mb-1 text-muted">Mayo 10</div>
+                        <p class="card-text mb-auto">Tuve la suerte de que me atendiera axel ramirez, ya que llegue al taller con un vidrio roto ,el delantero y Axel Ramirez lo recomiendo ya que hace un trabajo bueno,rapido y además confiable.
+                        </p>
+
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="{% static 'core/img/like.png'%}" id="logo" width="260" height="210">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Reseñas de clientes atendidos</strong>
+                        <h3 class="mb-0">Christian Guerrero</h3>
+                        <div class="mb-1 text-muted">Mayo 4</div>
+                        <p class="mb-auto">Tuve un problema con mi carro, falla de motor y lo mande al taller mecanico makween,me atendio Juan Gonzalez y lo dejo muy recomendado, me lo dejo impeque.
+                        </p>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+
+                        <img src="{% static 'core/img/like.png'%}" id="logo" width="260" height="210">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary">Reseñas de clientes atendidos</strong>
+                        <h3 class="mb-0">Lana Danger</h3>
+                        <div class="mb-1 text-muted">Mayo 9</div>
+                        <p class="card-text mb-auto">Tuve un problema con un foco, se me rompio y me atendio Axel Ramirez, 100 recomendado, muy bueno :).
+                        </p>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img src="{% static 'core/img/like.png'%}" id="logo" width="260" height="210">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success">Reseñas de clientes atendidos</strong>
+                        <h3 class="mb-0">Willy Wonka</h3>
+                        <div class="mb-1 text-muted">Mayo 1</div>
+                        <p class="mb-auto">Fui porque mi auto electrico daba fallas y me atendieron excelente,sobre todo Manuel Vasquez 100%.
+                        </p>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+
+                        <img src="{% static 'core/img/like.png'%}" id="logo" width="260" height="210">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h5 id="derechos">@Todos los derechos reservados</h5>
+
+    </footer>
+    
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+.navbar-expand-lg{
+    font-family: 'Baloo 2', cursive;
+    font-size: 18px;
+}
+.inicio{
+    margin-left: 900px;
+    font-size: 18px;
+}
+
+.form-inline{
+    margin-left: 20px;
+}
+
+.btn-outline-dark{
+    margin-left: 20px;
+    padding: 2px;
+}
+
+body{
+    background-color: #ffffff;
+    text-align: center;
+}
+
+/*  Footer */
+.galeria {
+    font-family: 'fuente2';
+}
+
+.galeria h1 {
+    text-align: center;
+    margin: 20px 0 15px 0;
+    font-weight: 300;
+}
+
+
+.contenedor-imagenes {
+    padding-top: 54px;
+    display: flex;
+    width: 85%;
+    margin: auto;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 3px;
+    font-family: 'Baloo 2', cursive;
+}
+
+.contenedor-imagenes .imagen {
+    width: 32%;
+    position: relative;
+    height: 250px;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, .75);
+    border-radius: 10px;
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(rgb(151, 222, 240),#ffffff) ;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: .5s ease;
+    border-radius: 10px;
+}
+
+.overlay h3 {
+    color: #000000;
+    font-weight: 300;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    transform: translate(-50%, -50%);
+}
+
+.overlay h2 p {
+    text-align: center;
+}
+
+.imagen:hover .overlay {
+    height: 100%;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1000px) {
+    .contenedor-imagenes {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .contenedor-imagenes {
+        width: 90%;
+    }
+    .contenedor-imagenes .imagen {
+        width: 48%;
+    }
+}
+
+@media screen and (max-width:450px) {
+    h1 {
+        font-size: 22px;
+    }
+    .contenedor-imagenes {
+        width: 98%;
+    }
+    .contenedor-imagenes .imagen {
+        width: 80%;
+    }
+}
+
+@media(max-width: 500px) {
+    .galeria {
+        flex-direction: column;
+    }
+    .logo {
+        flex-direction: column;
+    }
+}
+
+.body{
+    background:linear-gradient(#ffffff)
+    
+}
+
+
+#derechos{
+    color: rgb(0, 0, 0);
+    font-family: 'Baloo 2', cursive;
+    text-align: center;
+    padding-top: 25px;
+    
+}
+
+.card-qs{
+    font-family:  'Baloo 2',cursive;
+
+
+}
+
+.card-cf{
+    font-family:  'Baloo 2',cursive;
+
+}
+
+.card-qdl{
+    font-family:  'Baloo 2',cursive;
+
+}
+
+.card-np{
+    font-family:  'Baloo 2',cursive;
+
+}
+
+#logo{
+    height: 250px;
+    width: 300px;
+}
+
+.titulo{
+    font-size: 44px;
+    font-family: 'Baloo 2',cursive;
+    color: black;
+}
+.subtitulo{
+    font-size: 24px;
+    font-family: 'Baloo 2', cursive;
+    color: black;
+}
+
+.divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+.pie{
+    background-color: rgb(59, 213, 233);
+}
+#h2{
+    text-align: center;
+    margin-top: 100px;
+}
+

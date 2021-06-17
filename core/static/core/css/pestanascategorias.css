@@ -1,0 +1,64 @@
+.navbar-expand-lg{
+    font-family: 'Baloo 2', cursive;
+    font-size: 18px;
+}
+.form-inline{
+    margin-left: 20px;
+    font-family: 'Baloo 2';
+}
+.btn-outline-dark{
+    margin-left: 20px;
+    padding: 2px;
+}
+.inicio{
+    margin-left: 900px;
+}
+
+.logoN{
+    height: 200px;
+    width: 200px;
+    margin-left: 1000px;
+    margin-top: -200px;
+}
+.card-Plomo{
+    color: black;
+    margin: 5mm;
+    font-family: 'Baloo 2', cursive;
+}
+.card-Negra{
+    color: black;
+    margin: 5mm;
+    font-family: 'Baloo 2', cursive;
+}
+.card-Azul{
+    color: black;
+    margin: 5mm;
+    font-family: 'Baloo 2', cursive;
+}
+.card-Morada{
+    color: black;
+    margin: 5mm;
+    font-family: 'Baloo 2', cursive;
+}
+.card-Calipso{
+    color: black;
+    margin: 5mm;
+    font-family: 'Baloo 2', cursive;
+}
+.card-Gris{
+    color: black;
+    margin: 5mm;
+    font-family: 'Baloo 2', cursive;
+}
+.titulo{
+    font-size: 52px;
+    font-family: 'Baloo 2',cursive;
+}
+.subtitulo{
+    font-size: 34px;
+    font-family: 'Baloo 2', cursive;
+    margin-bottom: 20px;
+}
+.boton{
+    text-align: center;
+}

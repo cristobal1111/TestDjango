@@ -1,0 +1,110 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'core/img/logo.ico'%}">
+    <title>Manuel V&aacute;squez</title>
+
+    <!--Bootstrap 4 CSS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css	" rel="stylesheet">
+    <!--Bootstrap 4 JS-->
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js'></script>
+    <!--jquery-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+
+    <!--CSS-->
+    <link href="{% static 'core/css/perfil.css'%}" rel="stylesheet">
+
+</head>
+
+<body class="body">
+    <div class="row py-5 px-4">
+        <div class="col-md-5 mx-auto">
+            <!-- Profile widget -->
+            <div class="bg-white shadow overflow-hidden" id="fondo">
+                <div class="px-4 pt-0 pb-4 cover">
+                    <div class="media align-items-end profile-head">
+                        <div class="profile mr-3"><img src="{% static 'core/img/mecanicoelectro.jpg'%}" alt="..." width="130"
+                                class="rounded mb-2 img-thumbnail" id="perfil"></div>
+                        <div class="media-body mb-5 text-white">
+                            <h4 class="mt-0 mb-0" id="nombre">Manuel V&aacute;squez</h4>
+                            <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>Chile</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light p-4 d-flex justify-content-end text-center">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item" id="li">
+                            <h5 class="font-weight-bold mb-0 d-block">7</h5><small class="text-muted"> <i
+                                    class="fas fa-image mr-1"></i>Trabajos Realizados</small>
+                        </li>
+                        <li class="list-inline-item" id="li">
+                            <h5 class="font-weight-bold mb-0 d-block">7</h5><small class="text-muted"> <i
+                                    class="fas fa-user mr-1"></i>Clientes Atendidos</small>
+                        </li>
+                        <li class="list-inline-item" id="li">
+                            <h5 class="font-weight-bold mb-0 d-block">3</h5><small class="text-muted"> <i
+                                    class="fas fa-user mr-1"></i>Trabajos en proceso</small>
+                        </li>
+                    </ul>
+                </div>
+                <div class="px-4 py-3">
+                    <h5 class="mb-0">Informacion Personal:</h5>
+                    <div class="p-4 rounded shadow-sm bg-light">
+                        <h6 id="info">Nombre Completo</h5>
+                            <p class="font-italic mb-0" id="info">Manuel Eugenio Vasquez Soto </p>
+                        <h6 id="info">Correo:</h6>  
+                            <p class="font-italic mb-0" id="info">manuelvas@gmail.com </p>
+                        <h6 id="info">Numero de Contacto:</h6>
+                            <p class="font-italic mb-0" id="info">+56998773216 </p>
+                        <h6 id="info">Especialidad:</h6>
+                            <p class="font-italic mb-0" id="info">Especialista en Electronica </p>
+                        <h6 id="info">Trabajos que hace:</h6>
+                            <p class="font-italic mb-0" id="info">Hace todo tipo de trabajos electronicos, se especializa en autos mas avanzandos, revisiones del vehiculo por computadora, ver errores electricos.</p>
+                        
+                    </div>
+                </div>
+                <div class="py-4 px-4">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <h5 class="mb-0">Trabajos Realizados</h5><a href="#" class="btn btn-link text-muted">Ver todos</a>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 mb-2 pr-lg-1"><img
+                                src="{% static 'core/img/suspension1.jpg'%}"
+                                alt="" class="img-fluid rounded shadow-sm"></div>
+                        <div class="col-lg-6 mb-2 pl-lg-1"><img
+                                src="{% static 'core/img/electronica2.jpg'%}"
+                                alt="" class="img-fluid rounded shadow-sm"></div>
+                        <div class="col-lg-6 pr-lg-1 mb-2"><img
+                                src="{% static 'core/img/electronica3.jpg'%}"
+                                alt="" class="img-fluid rounded shadow-sm"></div>
+                        <div class="col-lg-6 pl-lg-1"><img
+                                src="{% static 'core/img/electronica4.jpeg'%}"
+                                alt="" class="img-fluid rounded shadow-sm"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="boton">
+        <a href="{% url 'atendedor' %}" class="btn btn-dark btn-lg enabled" tabindex="-1" role="button"
+                aria-disabled="true">
+                Volver a atendedor
+            </a>
+            <a href="{% url 'home' %}" class="btn btn-dark btn-lg enabled" tabindex="-1" role="button"
+                aria-disabled="true">
+                Volver a men&uacute; principal
+            </a>
+        </div>
+    <footer>
+       
+    </footer>
+</body>
+
+</html>

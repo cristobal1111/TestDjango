@@ -1,0 +1,153 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'core/img/logo.ico'%}">
+    <title>Nosotros</title>
+
+    <!--CSS-->
+    <link rel="Stylesheet" href="{% static 'core/css/nosotros.css'%}">
+
+    <!--Google Font-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+
+    <!--Bootstrap CSS-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+</head>
+
+<body class="body">
+    <header class="nav">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="collapse navbar-collapse" id="navbarsupportedcontent">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar Atención" aria-label="Search">
+                </form>
+                <ul class="navbar-nav mr-auto">
+                    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Buscar</button>
+                    <li class="inicio">
+                        <a class="nav-link" href="{% url 'home' %}">Inicio <span class="sr-only"></span></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Mantenciones </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Por categoría</a>
+                            <a class="dropdown-item" href="#">Por atendedor</a>
+                        </div>
+                    </li>
+                    <li class="disabled">
+                        <a class="nav-link disabled" href="{% url 'nosotros' %}" tabindex="-1" aria-disabled="true">Nosotros</a>
+                    </li>
+                    <li class="login">
+                        <a class="nav-link" href="{% url 'iniciarSesion' %}">Iniciar Sesión</a>
+                    </li>
+                    <li class="Registro">
+                        <a class="nav-link" href="{% url 'registro' %}">Registrarse</a>
+                    </li>
+                    </li>
+                    <li class="Contacto">
+                        <a class="nav-link" href="{% url 'Contacto' %}">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!--PARTE INFORMACION-->
+    <div class="cuerpo">
+        <div class="divider"></div>
+        <div class="container">
+            <div class="container my-5">
+                <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+                    <div class="col-lg-7 p-3 p-lg-5 pt-lg-3">
+                        <img src="{% static 'core/img/logo.png'%}" id="logo">
+                        <h1 class="display-4 fw-bold lh-1">¿Quienes Somos?</h1>
+                        <p class="lead">Somos de alumnos recién egresados de la carrera de mecánica automotriz,
+                            Decidimos hace un tiempo poner en
+                            funcionamiento un taller mecánico haciendo gala de las distintas habilidades adquiridas a lo
+                            largo de nuestra
+                            carrera.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm 12">
+                        <div class="galeria">
+                            <div class="linea"></div>
+                            <div class="contenedor-imagenes">
+                                <div class="imagen">
+                                    <h2 id="h2">
+                                        ¿C&oacute;mo llegar?
+                                    </h2>
+                                    <div class="overlay">
+                                        <a href="{% url 'googlemap' %}">
+                                            <img src="{% static 'core/img/map.png'%}" alt="Ubicacion">
+                                        </a>
+                                        <h2>Nuestra ubicación</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+            </div>
+
+            <div class="row align-items-md-stretch">
+                <div class="col-md-6">
+                    <div class="h-100 p-5 text-white bg-dark rounded-3">
+                        <h2>¿C&oacute;mo Funciona?</h2>
+                        <p>Cada uno de los socios participantes aportan con su experiencia y habilidades particulares,
+                            así
+                            mientras uno es especialista en electrónica automotriz, otro es especialista en cajas de
+                            cambio
+                            y
+                            otro en suspensión y dirección. </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="h-100 p-5 bg-light border rounded-3">
+                        <h2>¿Qu&eacute; deseamos lograr?</h2>
+                        <p>Queremos que la gente tenga a mecanicos confiables y que hagan un buen trabajo, que se le
+                            pueda
+                            confiar
+                            su vehiculo y sea de un costo apropiado para que los clientes queden conformes con las
+                            atenciones
+                            que les damos.</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="container col-xxl-8 px-4 py-5">
+            <div class="row flex-lg-row-reverse align-items-center g-5 py-5 ">
+                <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="{% static 'core/img/motor.jpg'%}" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700"
+                        height="500" loading="lazy">
+                </div>
+                <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold lh-1 mb-3">Nuestro Progreso</h1>
+                    <p class="lead">Nuestro taller ha funcionado de forma bastante buena, logrando posicionarnos muy
+                        bien
+                        en el mercado. Este trabajo nos da mucha competencia laboral, estamos constantemente
+                        promocionando nuestro
+                        trabajo para hacernos de mas clientes.</p>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <h5 id="derechos">@Todos los derechos reservados</h5>
+            
+        </footer>
+</body>
+
+</html>
