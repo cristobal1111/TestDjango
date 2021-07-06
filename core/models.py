@@ -34,3 +34,12 @@ class Usuario(models.Model):
     def str(self):
         return self.patente
     
+#Categoria para el usuario
+
+class CategoriaUsuario(models.Model):
+    iddCategoria = models.IntegerField(max_length=6,primary_key=True, verbose_name='id de Categoria')
+    NombredCategoria = models.CharField(max_length=15, verbose_name='Tipo usuario')
+
+    def str(self):
+        return self.NombredCategoria
+        
