@@ -45,8 +45,8 @@ def trabajo2(request):
 def trabajo3(request):
     return render(request, 'core/trabajo3.html')
 
-def perfil4(request):
-    return render(request, 'core/perfil4.html')
+def trabajo4(request):
+    return render(request, 'core/trabajo4.html')
 
 def registro(request):
     return render(request, 'core/registro.html')

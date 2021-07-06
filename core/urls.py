@@ -1,6 +1,6 @@
 from django.urls import path
 from django.urls.resolvers import URLPattern
-from .views import form_del_vehiculo, home,atendedor,caja,categoria,Contacto,ea,googlemap,iniciarSesion,neumaticos,nosotros,noticiass,trabajo1,trabajo2,trabajo3,perfil4,registro,suspension,listar,form_vehiculo, form_mod_vehiculo, form_del_vehiculo
+from .views import form_del_vehiculo, home,atendedor,caja,categoria,Contacto,ea,googlemap,iniciarSesion,neumaticos,nosotros,noticiass,trabajo1,trabajo2,trabajo3,trabajo4,registro,suspension,listar,form_vehiculo, form_mod_vehiculo, form_del_vehiculo
 
 
 
@@ -21,7 +21,7 @@ urlpatterns = [
     path('trabajo1', trabajo1, name='trabajo1'),
     path('trabajo2', trabajo2, name='trabajo2'),
     path('trabajo3', trabajo3, name='trabajo3'),
-    path('perfil4', perfil4, name='perfil4'),
+    path('trabajo4', trabajo4, name='trabajo4'),
     path('registro', registro, name='registro'),
     path('suspension', suspension, name='suspension'),
     path('listar', listar, name='listar'),
