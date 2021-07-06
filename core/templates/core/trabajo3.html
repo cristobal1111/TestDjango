@@ -1,0 +1,87 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'core/img/logo.ico'%}">
+    <title>Trabajo destacado</title>
+
+    <!--Bootstrap 4 CSS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css	" rel="stylesheet">
+    <!--Bootstrap 4 JS-->
+    <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js'></script>
+    <!--jquery-->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+
+
+    <!--CSS-->
+    <link href="{% static 'core/css/perfil.css'%}" rel="stylesheet">
+
+</head>
+
+<body class="body">
+    <div class="row py-5 px-4">
+        <div class="col-md-5 mx-auto">
+            <!-- Profile widget -->
+            <div class="bg-white shadow overflow-hidden" id="fondo">
+                <div class="px-4 pt-0 pb-4 cover">
+                    <div class="media align-items-end profile-head">
+                        <div class="profile mr-3"><img src="{% static 'core/img/mecanicoindex3.jpg'%}" alt="..." width="130"
+                                class="rounded mb-2 img-thumbnail" id="perfil"></div>
+                        <div class="media-body mb-5 text-white">
+                            <h4 class="mt-0 mb-0" id="nombre">Realizado por Mec&aacute;nico Jean Rodr&iacute;guez</h4>
+                            <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i>Chile</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-light p-4 d-flex justify-content-end text-center">
+                </div>
+                <div class="px-4 py-3">
+                    <h5 class="mb-0">Informacion de la atenci&oacute;n:</h5>
+                    <div class="p-4 rounded shadow-sm bg-light">
+                        <h6 id="info">Diagn&oacute;stico</h6>
+                            <p class="font-italic mb-0" id="info">Se realiza una verificaci&oacute;n de la suspensi&oacute;n del veh&iacute;culo por lo que se procede a cambiar amortiguadores traseros</p>
+                        <h6 id="info">Nombre atendedor:</h6>  
+                            <p class="font-italic mb-0" id="info">Jean Rodr&iacute;guez</p>
+                        <h6 id="info">Fecha:</h6>
+                            <p class="font-italic mb-0" id="info"> 07/03/2021 </p>
+                        <h6 id="info">Listado de materiales:</h6>
+                            <p class="font-italic mb-0" id="info">Se utilizaron herramientas como elevador para 4000kg, kit de suspensi&oacute;n </p>
+                    </div>
+                </div>
+                <div class="py-4 px-4">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                        <h5 class="mb-0">Galer&iacute;a de im&aacute;genes</h5>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 mb-2 pr-lg-1"><img
+                                src="{% static 'core/img/amortiguadores.jpg'%}"
+                                alt="" class="img-fluid rounded shadow-sm"></div>
+                        <div class="col-lg-6 mb-2 pl-lg-1"><img
+                                src="{% static 'core/img/suspensionimg.jpg'%}"
+                                alt="" class="img-fluid rounded shadow-sm"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="boton">
+        <a href="{% url 'atendedor' %}" class="btn btn-dark btn-lg enabled" tabindex="-1" role="button"
+                aria-disabled="true">
+                Volver a atendedor
+            </a>
+            <a href="{% url 'home' %}" class="btn btn-dark btn-lg enabled" tabindex="-1" role="button"
+                aria-disabled="true">
+                Volver a men&uacute; principal
+            </a>
+        </div>
+    <footer>
+       
+    </footer>
+</body>
+
+</html>

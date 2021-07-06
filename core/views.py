@@ -36,14 +36,14 @@ def nosotros(request):
 def noticiass(request):
     return render(request, 'core/noticiass.html')
 
-def perfil1(request):
-    return render(request, 'core/perfil1.html')
+def trabajo1(request):
+    return render(request, 'core/trabajo1.html')
 
-def perfil2(request):
-    return render(request, 'core/perfil2.html')
+def trabajo2(request):
+    return render(request, 'core/trabajo2.html')
 
-def perfil3(request):
-    return render(request, 'core/perfil3.html')
+def trabajo3(request):
+    return render(request, 'core/trabajo3.html')
 
 def perfil4(request):
     return render(request, 'core/perfil4.html')

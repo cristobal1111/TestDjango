@@ -3,11 +3,11 @@
 <html>
 <head>
 	<title>Nuestra Ubicaci&oacute;n</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'core/css/map.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'core/css/map.css' %}">
 </head>
 <body>
 	<div id="map"></div>
-<script src="./map.js"></script>
+<script src="{% static 'core/js/map.js' %}"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARTaUAVb3rJFu8dHzN1GbmitZdDprC2oU&callback=initMap"></script>
 </body>
 </html>
