@@ -21,3 +21,16 @@ class Vehiculo(models.Model):
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
     def str(self):
         return self.patente
+
+
+#modelO opara el cliente
+
+class Usuario(models.Model):
+
+    idCategoria =models.IntegerField(primary_key=True, verbose_name='Id Usuario')
+    Nombre = models.CharField(max_length=6, verbose_name='Nombre')
+    Correo = models.CharField(max_length=20, verbose_name='Email')
+    Contraseña = models.CharField(max_length=20,null=True, blank=True, verbose_name='Contraseña')
+    def str(self):
+        return self.patente
+    

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Categoria, Vehiculo
+from .models import Categoria, Vehiculo, Usuario
 
 
 # Register your models here.
@@ -7,4 +7,6 @@ from .models import Categoria, Vehiculo
 
 admin.site.register(Categoria)
 admin.site.register(Vehiculo)
+admin.site.register(Usuario)
+
 
