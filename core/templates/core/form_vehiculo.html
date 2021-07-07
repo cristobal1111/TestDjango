@@ -79,7 +79,7 @@
                     <img src="{% static 'core/img/logo.png'%}" class="logoN">
                 </p>
 
-                <form method="post" action="" id="formulario">
+                <form method="post" action="" id="formulario" >
                     {% csrf_token %}
                     <div class="form-group">
                         {{form.as_table}}
