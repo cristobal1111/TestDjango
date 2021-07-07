@@ -1,6 +1,9 @@
-from core.forms import VehiculoForm
+from TestDjango.settings import MESSAGGE_STORAGE
+from django.contrib.auth import authenticate, login
+from core.forms import CustomUserCreationForm, UsuarioForm, VehiculoForm
 from django.shortcuts import render, redirect
 from .models import Vehiculo
+from .models import Usuario
 
 # Create your views here.
 def home(request):
@@ -25,7 +28,10 @@ def googlemap(request):
     return render (request, 'core/googlemap.html')
 
 def iniciarSesion(request):
-    return render(request, 'core/iniciarSesion.html')
+    datos = {
+        'form' : CustomUserCreationForm()
+    }
+    return render(request, 'core/iniciarSesion.html', datos)
 
 def neumaticos(request):
     return render(request, 'core/neumaticos.html')
@@ -49,7 +55,19 @@ def trabajo4(request):
     return render(request, 'core/trabajo4.html')
 
 def registro(request):
-    return render(request, 'core/registro.html')
+    datos = {
+        'form': UsuarioForm()
+    }
+
+    if request.method== 'POST':
+        formulario = UsuarioForm(request.POST)
+        if formulario.is_valid():
+            formulario.save()
+            #Redirección al home
+            return redirect (to="home")
+        datos['form'] = formulario
+
+    return render(request, 'core/registro.html', datos)
 
 def suspension(request):
     return render(request, 'core/suspension.html')

@@ -1,4 +1,5 @@
 from django.urls import path
+from django.urls.conf import include
 from django.urls.resolvers import URLPattern
 from .views import form_del_vehiculo, home,atendedor,caja,categoria,Contacto,ea,googlemap,iniciarSesion,neumaticos,nosotros,noticiass,trabajo1,trabajo2,trabajo3,trabajo4,registro,suspension,listar,form_vehiculo, form_mod_vehiculo, form_del_vehiculo
 
@@ -27,5 +28,6 @@ urlpatterns = [
     path('listar', listar, name='listar'),
     path('form-vehiculo', form_vehiculo, name='form_vehiculo'),
     path('form-mod-vehiculo/<id>', form_mod_vehiculo, name='form_mod_vehiculo'),
-    path('form-del-vehiculo/<id>', form_del_vehiculo, name='form_del_vehiculo')
+    path('form-del-vehiculo/<id>', form_del_vehiculo, name='form_del_vehiculo'),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]

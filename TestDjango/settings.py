@@ -13,6 +13,8 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 import os
 from pathlib import Path
 
+import django
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -27,6 +29,12 @@ SECRET_KEY = '+t!4cfmmxc6*_0n@sr$29nv4rvpdrjqeb&wp88z6*#q1@!d-b^'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+
+MESSAGGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
+
+
+INICIARSESION_REDIRECT_URL = "/"
+LOGOUT_REDIRECT_URL = '/'
 
 
 # Application definition
@@ -81,7 +89,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.oracle',
         'NAME': '127.0.0.1/XEPDB1',
-        'USER': 'cprueba',
+        'USER': 'cprueba1',
         'PASSWORD': 'cprueba2',
         'TEST':{
             'USER' : 'default_test',

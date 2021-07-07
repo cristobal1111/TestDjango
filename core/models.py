@@ -20,7 +20,7 @@ class Vehiculo(models.Model):
     categoria = models.ForeignKey(Categoria, on_delete=models.CASCADE)
 
 
-    def str(self):
+    def __str__(self):
         return self.patente
 
 
@@ -28,14 +28,13 @@ class Vehiculo(models.Model):
 
 class Usuario(models.Model):
 
-    idCategoria =models.IntegerField(primary_key=True, verbose_name='Id Usuario')
-    Nombre = models.CharField(max_length=6, verbose_name='Nombre')
-    Correo = models.CharField(max_length=20, verbose_name='Email')
-    Contraseña = models.CharField(max_length=20,null=True, blank=True, verbose_name='Contraseña')
+    nombre = models.CharField(max_length=6, verbose_name='Nombre')
+    email = models.CharField(primary_key=True, max_length=20, verbose_name='Email')
+    contrasena = models.CharField(max_length=20,null=True, blank=True, verbose_name='Contrasena')
     
     def str(self):
-        return self.patente
-    
+        return self.Nombre
+
  
     #Categoria para el usuario
 
@@ -43,7 +42,7 @@ class CategoriaUsuario(models.Model):
     iddCategoria = models.IntegerField(primary_key=True, verbose_name='id de Categoria')
     NombredCategoria = models.CharField(max_length=15, verbose_name='Tipo usuario')
 
-    def str(self):
+    def __str__(self):
         return self.NombredCategoria
 
 
@@ -56,7 +55,7 @@ class Automovil(models.Model):
     anio = models.IntegerField()
     imagen = models.ImageField(upload_to="automoviles",null=True)
 
-    def str(self):
+    def __str__(self):
         return self.patente
 
 
