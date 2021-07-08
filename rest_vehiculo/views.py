@@ -15,7 +15,7 @@ from .serializers import VehiculoSerializers
 @api_view(['GET','POST'])
 def lista_vehiculos(request):
     """
-    Lista todo los vehículos
+    Lista todos los vehículos
     """
     if (request.method=='GET'):
         vehiculo = Vehiculo.objects.all()
