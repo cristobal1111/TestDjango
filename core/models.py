@@ -46,17 +46,10 @@ class CategoriaUsuario(models.Model):
         return self.NombredCategoria
 
 
-        
 
-class Automovil(models.Model):
 
-    patente =  models.CharField(primary_key=True,max_length=18, unique=True)
-    modelo = models.CharField(max_length=50)
-    anio = models.IntegerField()
-    imagen = models.ImageField(upload_to="automoviles",null=True)
 
-    def __str__(self):
-        return self.patente
+
 
 
 

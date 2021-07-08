@@ -33,7 +33,7 @@ ALLOWED_HOSTS = []
 MESSAGGE_STORAGE = "django.contrib.messages.storage.cookie.CookieStorage"
 
 
-INICIARSESION_REDIRECT_URL = "/"
+LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = '/'
 
 
@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'core',
     'rest_vehiculo',
+    'rest_usuario',
 ]
 
 MIDDLEWARE = [
